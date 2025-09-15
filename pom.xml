@@ -18,8 +18,8 @@
                 <version>3.13.0</version>
                 <inherited>true</inherited>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>21</source>
+                    <target>21</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -59,6 +59,29 @@
             <artifactId>jersey-media-json-binding</artifactId>
         </dependency>
         -->
+
+        
+       <!-- JAXB API -->
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>4.0.2</version>
+        </dependency>
+
+        <!-- JAXB Runtime -->
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>4.0.2</version>
+        </dependency>
+        
+        <!-- Support XML via JAXB pour Jersey -->
+		<dependency>
+   			<groupId>org.glassfish.jersey.media</groupId>
+    		<artifactId>jersey-media-jaxb</artifactId>
+    		<version>${jersey.version}</version>
+</dependency>
+        
     </dependencies>
     <properties>
         <jersey.version>3.1.10</jersey.version>
