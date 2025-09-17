@@ -7,6 +7,7 @@ import com.ServicesWebREST.messenger.service.MessageService1;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
@@ -21,5 +22,13 @@ public class MessageResource {
 	public List<Message> getMessages() {
 		return messageservice.getAllMessages();
 	}
+	
+	@GET
+	@Path("/{messageId}")
+	@Produces(MediaType.APPLICATION_XML)
+	public Message test(@PathParam("messageId") long id) {
+		return messageservice.getMessage(id);
+	}
+	
 
 }

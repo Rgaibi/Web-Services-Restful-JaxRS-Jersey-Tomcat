@@ -24,7 +24,7 @@ public class MessageService1 {
 	
 	public Message getMessage(long id) {
 		return messages.get(id);
-	}
+	} 
 	
 	public Message addMessage(Message message) {
 		
